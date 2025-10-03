@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobLab - Mobile Unverified Employers</title>
+    <title>JobLab - Email Unverified Employers</title>
 
     <link rel="shortcut icon" type="image/png" href="https://script.viserlab.com/joblab/assets/images/logo_icon/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -34,37 +34,37 @@
         <div class="sidebar__menu-wrapper">
             <ul class="sidebar__menu">
                                                                                                         <li class="sidebar-menu-item ">
-                            <a href="https://script.viserlab.com/joblab/admin/dashboard" class="nav-link ">
+                            <a href="/dashboard" class="nav-link ">
                                 <i class="menu-icon las la-home"></i>
                                 <span class="menu-title">Dashboard</span>
                                                                                             </a>
                         </li>
                                                                                                                             <li class="sidebar-menu-item ">
-                            <a href="https://script.viserlab.com/joblab/admin/category" class="nav-link ">
+                            <a href="/category" class="nav-link ">
                                 <i class="menu-icon las la-stream"></i>
                                 <span class="menu-title">Categories</span>
                                                                                             </a>
                         </li>
                                                                                                                             <li class="sidebar-menu-item ">
-                            <a href="https://script.viserlab.com/joblab/admin/role" class="nav-link ">
+                            <a href="/role" class="nav-link ">
                                 <i class="menu-icon las la-user-tag"></i>
                                 <span class="menu-title">Roles</span>
                                                                                             </a>
                         </li>
                                                                                                                             <li class="sidebar-menu-item ">
-                            <a href="https://script.viserlab.com/joblab/admin/industry" class="nav-link ">
+                            <a href="/industry" class="nav-link ">
                                 <i class="menu-icon las la-industry"></i>
                                 <span class="menu-title">Manage Industry</span>
                                                                                             </a>
                         </li>
                                                                                                                             <li class="sidebar-menu-item ">
-                            <a href="https://script.viserlab.com/joblab/admin/department" class="nav-link ">
+                            <a href="/department" class="nav-link ">
                                 <i class="menu-icon las la-building"></i>
                                 <span class="menu-title">Manage Department</span>
                                                                                             </a>
                         </li>
                                                                                                                             <li class="sidebar-menu-item ">
-                            <a href="https://script.viserlab.com/joblab/admin/plan" class="nav-link ">
+                            <a href="/plan" class="nav-link ">
                                 <i class="menu-icon lab la-telegram-plane"></i>
                                 <span class="menu-title">Manage Plan</span>
                                                                                             </a>
@@ -80,32 +80,32 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/jobs" class="nav-link">
+                                            <a href="/jobs" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">All Jobs</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/jobs/pending" class="nav-link">
+                                            <a href="/pending" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Pending Jobs</span>
                                                                                                                                                     <span class="menu-badge bg--info ms-auto">2</span>
                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/jobs/approved" class="nav-link">
+                                            <a href="/approved" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Approved Jobs</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/jobs/expired" class="nav-link">
+                                            <a href="/expired" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Expired Jobs</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/jobs/reject" class="nav-link">
+                                            <a href="/reject" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Rejected Jobs</span>
                                                                                                                                             </a>
@@ -121,37 +121,37 @@
                             <div class="sidebar-submenu  ">
                                 <ul>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/users/active" class="nav-link">
+                                            <a href="/active" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Active Users</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/users/banned" class="nav-link">
+                                            <a href="/banned" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Banned Users</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/users/email-unverified" class="nav-link">
+                                            <a href="/email-unverified" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Email Unverified</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/users/mobile-unverified" class="nav-link">
+                                            <a href="/mobile-unverified" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Mobile Unverified</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/users" class="nav-link">
+                                            <a href="/users" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">All Users</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/users/send-notification" class="nav-link">
+                                            <a href="/send-notification" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Send Notification</span>
                                                                                                                                             </a>
@@ -167,25 +167,25 @@
                             <div class="sidebar-submenu sidebar-submenu__open ">
                                 <ul>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/employers/active" class="nav-link">
+                                            <a href="/active" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Active Employers</span>
                                                                                                                                             </a>
                                         </li>
                                                                                                                 <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/employers/banned" class="nav-link">
+                                            <a href="/banned" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Banned Employers</span>
                                                                                                                                             </a>
                                         </li>
-                                                                                                                <li class="sidebar-menu-item  ">
-                                            <a href="https://script.viserlab.com/joblab/admin/employers/email-unverified" class="nav-link">
+                                                                                                                <li class="sidebar-menu-item active ">
+                                            <a href="/email-unverified" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Email Unverified</span>
                                                                                                                                             </a>
                                         </li>
-                                                                                                                <li class="sidebar-menu-item active ">
-                                            <a href="https://script.viserlab.com/joblab/admin/employers/mobile-unverified" class="nav-link">
+                                                                                                                <li class="sidebar-menu-item  ">
+                                            <a href="/mobile-unverified" class="nav-link">
                                                 <i class="menu-icon las la-dot-circle"></i>
                                                 <span class="menu-title">Mobile Unverified</span>
                                                                                                                                             </a>
@@ -536,7 +536,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            3 days ago</span>
+                                            2 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -546,7 +546,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            4 days ago</span>
+                                            3 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -556,7 +556,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            4 days ago</span>
+                                            3 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -566,7 +566,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New member registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            4 days ago</span>
+                                            3 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -576,7 +576,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            6 days ago</span>
+                                            5 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -677,7 +677,7 @@
             <div class="body-wrapper">
                 <div class="bodywrapper__inner">
                                         <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
-    <h6 class="page-title">Mobile Unverified Employers</h6>
+    <h6 class="page-title">Email Unverified Employers</h6>
     <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
             <form class="d-flex flex-wrap gap-2">
             <div class="input-group w-auto flex-fill">
@@ -728,7 +728,7 @@
                 </button>
             </div>
             <form method="POST">
-                <input type="hidden" name="_token" value="UxVgEVSPe5i4r4cZ9eJqizPxBcjflFcEy9ofKXSd" autocomplete="off">                <div class="modal-body">
+                <input type="hidden" name="_token" value="LEN8c2tQGGc85j6zKT0S42IBcYKqKmY1PQmdTnsw" autocomplete="off">                <div class="modal-body">
                     <p class="question"></p>
                     
                 </div>

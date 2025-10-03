@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JobLab - Notification to Verified Users</title>
+    <title>JobLab - Active Users</title>
 
     <link rel="shortcut icon" type="image/png" href="https://script.viserlab.com/joblab/assets/images/logo_icon/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -20,81 +20,7 @@
     <link rel="stylesheet" href="https://script.viserlab.com/joblab/assets/global/css/select2.min.css">
     <link rel="stylesheet" href="https://script.viserlab.com/joblab/assets/admin/css/app.css">
 
-        <style>
-        .countdown {
-            position: relative;
-            height: 100px;
-            width: 100px;
-            text-align: center;
-            margin: 0 auto;
-        }
-
-        .coaling-time {
-            color: yellow;
-            position: absolute;
-            z-index: 999999;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 30px;
-        }
-
-        .coaling-loader svg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            transform: rotateY(-180deg) rotateZ(-90deg);
-            position: relative;
-            z-index: 1;
-        }
-
-        .coaling-loader svg circle {
-            stroke-dasharray: 314px;
-            stroke-dashoffset: 0px;
-            stroke-linecap: round;
-            stroke-width: 6px;
-            stroke: #4634ff;
-            fill: transparent;
-
-        }
-
-        .coaling-loader .svg-count {
-            width: 100px;
-            height: 100px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .coaling-loader .svg-count::before {
-            content: '';
-            position: absolute;
-            outline: 5px solid #f3f3f9;
-            z-index: -1;
-            width: calc(100% - 16px);
-            height: calc(100% - 16px);
-            left: 8px;
-            top: 8px;
-            z-index: -1;
-            border-radius: 100%
-        }
-
-        .coaling-time-count {
-            color: #4634ff;
-        }
-
-        @keyframes countdown {
-            from {
-                stroke-dashoffset: 0px;
-            }
-
-            to {
-                stroke-dashoffset: 314px;
-            }
-        }
-    </style>
-</head>
+    </head>
 
 <body>
 
@@ -108,7 +34,7 @@
         <div class="sidebar__menu-wrapper">
             <ul class="sidebar__menu">
                                                                                                         <li class="sidebar-menu-item ">
-                                                                                                                <li class="sidebar-menu-item active">
+                                                                                                        <li class="sidebar-menu-item active">
                             <a href = "/dashboard" class="nav-link ">
                                 <i class="menu-icon las la-home"></i>
                                 <span class="menu-title">Dashboard</span>
@@ -612,7 +538,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            3 days ago</span>
+                                            2 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -632,7 +558,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            4 days ago</span>
+                                            3 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -642,7 +568,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New member registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            4 days ago</span>
+                                            3 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -652,7 +578,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New employer registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            6 days ago</span>
+                                            5 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -662,7 +588,7 @@
                                     <div class="navbar-notifi__right">
                                         <h6 class="notifi__title">New member registered</h6>
                                         <span class="time"><i class="far fa-clock"></i>
-                                            6 days ago</span>
+                                            5 days ago</span>
                                     </div>
                                 </div>
                             </a>
@@ -753,126 +679,849 @@
             <div class="body-wrapper">
                 <div class="bodywrapper__inner">
                                         <div class="d-flex mb-30 flex-wrap gap-3 justify-content-between align-items-center">
-    <h6 class="page-title">Notification to Verified Users</h6>
+    <h6 class="page-title">Active Users</h6>
     <div class="d-flex flex-wrap justify-content-end gap-2 align-items-center breadcrumb-plugins">
-            </div>
+            <form class="d-flex flex-wrap gap-2">
+            <div class="input-group w-auto flex-fill">
+    <input type="search" name="search" class="form-control bg--white" placeholder="Username / Email" value="">
+    <button class="btn btn--primary" type="submit"><i class="la la-search"></i></button>
+</div>
+        
+</form>
+    </div>
 </div>
 
-                        
-    <div class="row ">
-        <div class="col-xl-12">
-            <div class="card">
-                <form class="notify-form" method="POST" enctype="multipart/form-data">
-                    <input type="hidden" name="_token" value="3QqizkauIcMBCQHT3WN6994dLhGh3Zzk0OMRHR8L" autocomplete="off">                    <input type="hidden" name="via" value="email">
-                    <div class="card-body">
                         <div class="row">
-                            <div class="col-12">
-                                <div class="row">
-                                                                            <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-3 col-sm-6">
-                                            <div class="notification-via mb-4   active  "
-                                                data-method="email">
-                                                <span class="active-badge"> <i class="las la-check"></i> </span>
-                                                <div class="send-via-method">
-                                                    <i class="las la-envelope"></i>
-                                                    <h5>Send Via Email</h5>
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body p-0">
+                    <div class="table-responsive--md  table-responsive">
+                        <table class="table table--light style--two">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Email-Mobile</th>
+                                    <th>Country</th>
+                                    <th>Joined At</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="santhosh kumar"
+                                                        class="plugin_bg">
                                                 </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">santhosh kumar</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/713">
+                                                            <span>@</span>santhosh
+                                                        </a>
+                                                    </span>
+                                                </span>
                                             </div>
-                                        </div>
-                                                                                                                                            </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Being Sent To </label>
-                                    <select class="form-control select2" name="being_sent_to" required
-                                        data-minimum-results-for-search="1">
-                                                                                    <option value="allUsers" >
-                                                All Users</option>
-                                                                                    <option value="selectedUsers" >
-                                                Selected Users</option>
-                                                                                    <option value="twoFaDisableUsers" >
-                                                2FA Disable User</option>
-                                                                                    <option value="twoFaEnableUsers" >
-                                                2FA Enable User</option>
-                                                                                    <option value="pendingTicketUser" >
-                                                Pending Ticket Users</option>
-                                                                                    <option value="answerTicketUser" >
-                                                Answer Ticket Users</option>
-                                                                                    <option value="closedTicketUser" >
-                                                Closed Ticket Users</option>
-                                                                                    <option value="notLoginUsers" >
-                                                Last Few Days Not Login Users</option>
-                                                                                    <option value="profileNotCompleteUsers" >
-                                                Profile Not Complete Users</option>
-                                                                                    <option value="notAppliedJob" >
-                                                Not Applied Job Users</option>
-                                                                                    <option value="rejectedJobApplyUsers" >
-                                                Rejected Job Apply Users</option>
-                                                                            </select>
-                                    <small class="text--info d-none userCountText"> <i class="las la-info-circle"></i>
-                                        <strong class="userCount">0</strong> active users found to send the notification</small>
-                                </div>
-                                <div class="input-append">
-                                </div>
-                            </div>
-                            <div class="form-group col-md-12 subject-wrapper">
-                                <label>Subject <span class="text--danger">*</span> </label>
-                                <input type="text" class="form-control" placeholder="Subject / Title" name="subject"
-                                    value="">
-                            </div>
-                            <div class="form-group col-md-12 push-notification-file d-none">
-                                <label>Image (optional) </label>
-                                <input type="file" class="form-control" name="image" accept=".png,.jpg,.jpeg">
-                                <small class="mt-3 text-muted"> Supported Files:<b>.png, .jpg, .jpeg</b> </small>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Message <span class="text--danger">*</span> </label>
-                                    <textarea class="form-control nicEdit" id="nicEdit" name="message" rows="10"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-12">
-                                <div class="row">
-                                    <div class="col-md-4 start-from-col">
-                                        <div class="form-group">
-                                            <label>Start Form </label>
-                                            <input class="form-control" name="start"
-                                                value="" type="number"
-                                                placeholder="Start form user id. e.g. 1" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 per-batch-col">
-                                        <div class="form-group">
-                                            <label>Per Batch </label>
-                                            <div class="input-group">
-                                                <input class="form-control" name="batch"
-                                                    value="" type="number"
-                                                    placeholder="How many user" required>
-                                                <span class="input-group-text">
-                                                    User                                                </span>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="India">
+                                                IN
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-22 11:25 AM
+                                            <br>
+                                            3 days ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/713"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 cooling-period-col">
-                                        <div class="form-group">
-                                            <label>Cooling Period </label>
-                                            <div class="input-group">
-                                                <input class="form-control" name="cooling_time"
-                                                    value=""
-                                                    type="number" placeholder="Waiting time" required>
-                                                <span class="input-group-text">
-                                                    Seconds                                                </span>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="Tarun kumar Thumula"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">Tarun kumar Thumula</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/712">
+                                                            <span>@</span>tarunmk
+                                                        </a>
+                                                    </span>
+                                                </span>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="India">
+                                                IN
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-20 09:50 AM
+                                            <br>
+                                            5 days ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/712"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="ROUSHAN KUMAR"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">ROUSHAN KUMAR</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/711">
+                                                            <span>@</span>rsa1234
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="India">
+                                                IN
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-20 08:12 AM
+                                            <br>
+                                            6 days ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/711"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="Neeraj nagar"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">Neeraj nagar</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/710">
+                                                            <span>@</span>nagar123
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Afghanistan">
+                                                AF
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-18 10:08 AM
+                                            <br>
+                                            1 week ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/710"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="sandeep ram"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">sandeep ram</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/709">
+                                                            <span>@</span>sam2525
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Afghanistan">
+                                                AF
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-17 06:41 AM
+                                            <br>
+                                            1 week ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/709"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="dsad dasdsa"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">dsad dasdsa</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/708">
+                                                            <span>@</span>immo24
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Austria">
+                                                AT
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-11 08:38 PM
+                                            <br>
+                                            2 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/708"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="Test Temp"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">Test Temp</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/707">
+                                                            <span>@</span>chewy123
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Afghanistan">
+                                                AF
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-11 04:30 PM
+                                            <br>
+                                            2 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/707"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="roraha6661 roraha6661"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">roraha6661 roraha6661</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/706">
+                                                            <span>@</span>roraha6661
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="India">
+                                                IN
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-11 09:27 AM
+                                            <br>
+                                            2 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/706"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="user user"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">user user</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/705">
+                                                            <span>@</span>user15
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Jordan">
+                                                JO
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-06 08:01 PM
+                                            <br>
+                                            2 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/705"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="NAEEM MIA"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">NAEEM MIA</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/704">
+                                                            <span>@</span>naeem46
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Bangladesh">
+                                                BD
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-06 09:35 AM
+                                            <br>
+                                            2 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/704"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="ssssss zzzzzz"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">ssssss zzzzzz</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/703">
+                                                            <span>@</span>ssszzz
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Egypt">
+                                                EG
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-04 07:47 PM
+                                            <br>
+                                            3 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/703"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="Doris Swisher"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">Doris Swisher</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/702">
+                                                            <span>@</span>adfsadfasdf
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Ukraine">
+                                                UA
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-09-03 03:21 PM
+                                            <br>
+                                            3 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/702"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="wdaqd sadasdas"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">wdaqd sadasdas</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/701">
+                                                            <span>@</span>sdsadasdas
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Afghanistan">
+                                                AF
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-28 11:05 AM
+                                            <br>
+                                            4 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/701"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="MD. AZAD"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">MD. AZAD</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/700">
+                                                            <span>@</span>makazad186
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Bangladesh">
+                                                BD
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-28 05:13 AM
+                                            <br>
+                                            4 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/700"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="Jalal Naghizada"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">Jalal Naghizada</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/699">
+                                                            <span>@</span>admin2222
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Azerbaijan">
+                                                AZ
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-27 03:24 PM
+                                            <br>
+                                            4 weeks ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/699"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="Arnaldo Faiela"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">Arnaldo Faiela</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/698">
+                                                            <span>@</span>arnaldo
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Mozambique">
+                                                MZ
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-25 12:34 PM
+                                            <br>
+                                            1 month ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/698"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="areeb khan"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">areeb khan</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/697">
+                                                            <span>@</span>khansdsad
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Pakistan">
+                                                PK
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-18 10:18 PM
+                                            <br>
+                                            1 month ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/697"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="ishtiaque khan"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">ishtiaque khan</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/696">
+                                                            <span>@</span>admin18787
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="India">
+                                                IN
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-18 08:20 AM
+                                            <br>
+                                            1 month ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/696"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="manulyja manulyja"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">manulyja manulyja</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/695">
+                                                            <span>@</span>manulyja
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="Turkey">
+                                                TR
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-18 08:02 AM
+                                            <br>
+                                            1 month ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/695"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                                    <tr>
+                                        <td>
+                                            <div class="user">
+                                                <div class="thumb">
+                                                    <img src="https://script.viserlab.com/joblab/assets/images/userdp.png" alt="djfjh djhfj"
+                                                        class="plugin_bg">
+                                                </div>
+                                                <span class="name">
+                                                    <span class="fw-bold">djfjh djhfj</span>
+                                                    <br>
+                                                    <span class="small">
+                                                        <a href="https://script.viserlab.com/joblab/admin/users/detail/694">
+                                                            <span>@</span>
+                                                        </a>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <td>[Email is protected for the demo]<br>[Mobile is protected for the demo]</td>
+                                        <td>
+                                            <span class="fw-bold" title="">
+                                                
+                                            </span>
+                                        </td>
+                                        <td>
+                                            2025-08-14 03:49 PM
+                                            <br>
+                                            1 month ago
+                                        </td>
+                                        <td>
+                                            <div class="button--group">
+                                                <a href="https://script.viserlab.com/joblab/admin/users/detail/694"
+                                                    class="btn btn-sm btn-outline--primary">
+                                                    <i class="las la-desktop"></i> Details                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                                            </tbody>
+                        </table>
                     </div>
-                    <div class="card-footer">
-                        <button class="btn w-100 h-45 btn--primary me-2" type="submit">Submit</button>
-                    </div>
-                </form>
+                </div>
+                                    <div class="card-footer py-4">
+                        <nav class="d-flex justify-items-center justify-content-between">
+        <div class="d-flex justify-content-between flex-fill d-sm-none">
+            <ul class="pagination">
+                
+                                    <li class="page-item disabled" aria-disabled="true">
+                        <span class="page-link">‹</span>
+                    </li>
+                
+                
+                                    <li class="page-item">
+                        <a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=2" rel="next">›</a>
+                    </li>
+                            </ul>
+        </div>
+
+        <div class="d-none flex-sm-fill d-sm-flex align-items-sm-center justify-content-sm-between">
+            <div>
+                <p class="small text-muted">
+                    Showing
+                    <span class="fw-semibold">1</span>
+                    to
+                    <span class="fw-semibold">20</span>
+                    of
+                    <span class="fw-semibold">682</span>
+                    results
+                </p>
             </div>
+
+            <div>
+                <ul class="pagination">
+                    
+                                            <li class="page-item disabled" aria-disabled="true" aria-label="‹">
+                            <span class="page-link" aria-hidden="true">&lsaquo;</span>
+                        </li>
+                    
+                    
+                                            
+                        
+                        
+                                                                                                                        <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=2">2</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=3">3</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=4">4</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=5">5</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=6">6</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=7">7</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=8">8</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=9">9</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=10">10</a></li>
+                                                                                                                                
+                                                    <li class="page-item disabled" aria-disabled="true"><span class="page-link">...</span></li>
+                        
+                        
+                                                                    
+                        
+                        
+                                                                                                                        <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=34">34</a></li>
+                                                                                                                                <li class="page-item"><a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=35">35</a></li>
+                                                                                                        
+                    
+                                            <li class="page-item">
+                            <a class="page-link" href="https://script.viserlab.com/joblab/admin/users/active?page=2" rel="next" aria-label="›">&rsaquo;</a>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+
+                    </div>
+                            </div>
         </div>
     </div>
                 </div>
@@ -984,147 +1633,6 @@
     </script>
 
         <script>
-        let formSubmit = false;
-
-        (function($) {
-            "use strict"
-
-            $('select[name=being_sent_to]').on('change', function(e) {
-                let methodName = $(this).val();
-                if (!methodName) return;
-                getUserCount(methodName);
-                methodName = methodName.toUpperCase();
-
-                if (methodName == 'SELECTEDUSERS') {
-                    $('.input-append').html(`
-                    <div class="form-group" id="user_list_wrapper">
-                        <label class="required">Select User</label>
-                        <select name="user[]"  class="form-control" id="user_list" required multiple >
-                            <option disabled>Select One</option>
-                        </select>
-                    </div>
-                    `);
-                    fetchUserList();
-                    return;
-                }
-                if (methodName == 'TOPDEPOSITEDUSERS') {
-                    $('.input-append').html(`
-                    <div class="form-group">
-                        <label class="required">Number Of Top Deposited User</label>
-                        <input class="form-control" type="number" name="number_of_top_deposited_user" >
-                    </div>
-                    `);
-                    return;
-                }
-
-                if (methodName == 'NOTLOGINUSERS') {
-                    $('.input-append').html(`
-                    <div class="form-group">
-                        <label class="required">Number Of Days</label>
-                        <div class="input-group">
-                            <input class="form-control" value="" type="number" name="number_of_days" >
-                            <span class="input-group-text">Days</span>
-                        </div>
-                    </div>
-                    `);
-                    return;
-                }
-
-                $('.input-append').empty();
-            }).change();
-
-            function fetchUserList() {
-                $('.row #user_list').select2({
-                    ajax: {
-                        url: "https://script.viserlab.com/joblab/admin/users/list",
-                        type: "get",
-                        dataType: 'json',
-                        delay: 1000,
-                        data: function(params) {
-                            return {
-                                search: params.term,
-                                page: params.page,
-                            };
-                        },
-                        processResults: function(response, params) {
-                            params.page = params.page || 1;
-                            let data = response.users.data;
-                            return {
-                                results: $.map(data, function(item) {
-                                    return {
-                                        text: item.email,
-                                        id: item.id
-                                    }
-                                }),
-                                pagination: {
-                                    more: response.more
-                                }
-                            };
-                        },
-                        cache: false,
-                    },
-                    dropdownParent: $('.input-append #user_list_wrapper')
-                });
-            }
-
-            function getUserCount(methodName) {
-                var methodNameUpper = methodName.toUpperCase();
-                if (methodNameUpper == 'SELECTEDUSERS' || methodNameUpper == 'ALLUSERS' || methodNameUpper ==
-                    'TOPDEPOSITEDUSERS' ||
-                    methodNameUpper == 'NOTLOGINUSERS') {
-                    $('.userCount').text(0);
-                    $('.userCountText').addClass('d-none');
-                    return;
-                }
-                var route = "https://script.viserlab.com/joblab/admin/users/count-by-segment/:methodName"
-                route = route.replace(':methodName', methodName)
-                $.get(route, function(response) {
-                    $('.userCount').text(response);
-                    $('.userCountText').removeClass('d-none');
-                });
-            }
-
-            $('.notification-via').on('click', function() {
-                $('.notification-via').removeClass('active');
-                $(this).addClass('active');
-                $('[name=via]').val($(this).data('method'));
-
-                if ($(this).data('method') == 'email') {
-                    var nicPrev = $('.nicEdit').prev('div');
-                    nicPrev.prev('div').removeClass('d-none');
-                    nicPrev.removeClass('d-none');
-                    $('.nicEdit').css('display', 'none')
-                } else {
-                    var nicPrev = $('.nicEdit').prev('div');
-                    nicPrev.prev('div').addClass('d-none');
-                    nicPrev.addClass('d-none');
-                    $('.nicEdit').css('display', 'block')
-                    $('.nicEdit').val("")
-                }
-
-                if ($(this).data('method') == 'push') {
-                    $('.push-notification-file').removeClass('d-none');
-                } else {
-                    $('.push-notification-file').addClass('d-none');
-                    $('.push-notification-file [type=file]').val('');
-                }
-
-                if ($(this).data('method') == 'push' || $(this).data('method') == 'email') {
-                    $('.subject-wrapper').removeClass('d-none');
-                } else {
-                    $('.subject-wrapper').addClass('d-none')
-                }
-                $('.subject-wrapper').find('input').val('');
-            });
-
-            $(".notify-form").on("submit", function(e) {
-                formSubmit = true;
-            });
-
-                    })(jQuery);
-
-            </script>
-    <script>
         if($('li').hasClass('active')){
             $('.sidebar__menu-wrapper').animate({
                 scrollTop: eval($(".active").offset().top - 320)
